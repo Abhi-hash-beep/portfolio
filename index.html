@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* New gradient based on your screenshot with pink, purple, and blue tones */
+            background: linear-gradient(-45deg, #f72585, #b5179e, #7209b7, #4361ee);
+            background-size: 400% 400%;
+            /* Smoother animation speed */
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800/30 backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">MyPortfolio</span>
+            </a>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li><a href="#home" class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">Home</a></li>
+                    <li><a href="#about" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">About</a></li>
+                    <li><a href="#skills" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">Skills</a></li>
+                    <li><a href="#projects" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">Projects</a></li>
+                    <li><a href="#education" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">Education</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-gray-400 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-500 md:p-0">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hello, I'm Abhishek R</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">A passionate DevOps Engineer and Java Full Stack Developer.</p>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Get in Touch</a>
+               
+                 <a href="https://drive.google.com/file/d/1cPpgTh1i2h4HBSmRZTwsXE2jWTUdsr3Y/view?usp=sharing" target="_blank" class="ml-4 border border-blue-600 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    I am a recent 2024 Computer Science and Engineering graduate with a specialization in DevOps. My journey in tech has equipped me with a robust skill set in Java Full Stack development, cloud computing with AWS, and a comprehensive suite of DevOps tools. As a fresher, I am passionate about building efficient, scalable, and automated solutions. I thrive in collaborative environments and am always eager to learn and apply new technologies to solve complex problems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Java Full Stack -->
+                <div class="bg-gray-700/50 p-6 rounded-lg skill-card">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Java Full Stack</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Core Java (OOPs, Collections, Threads)</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>HTML, CSS, JavaScript</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>JDBC, Hibernate, JSP, Servlets</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>JSON</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Spring (IoC, MVC), Spring Boot</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>SQL</li>
+                    </ul>
+                </div>
+
+                <!-- AWS Cloud -->
+                <div class="bg-gray-700/50 p-6 rounded-lg skill-card">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">AWS</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>EC2 & EBS</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>VPC & IAM</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>RDS & Route53</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Lambda</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>CloudWatch</li>
+                    </ul>
+                </div>
+
+                <!-- DevOps -->
+                <div class="bg-gray-700/50 p-6 rounded-lg skill-card">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">DevOps Tools</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Git, GitHub</li>
+                          <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Maven</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Docker (Volume, Swarm, Compose,Dockerfile)</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Shell Scripting & Linux</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Jenkins & Kubernetes</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Terraform & Ansible</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Grafana & Prometheus</li>
+                    </ul>
+                </div>
+
+                <!-- Developer Tools -->
+                <div class="bg-gray-700/50 p-6 rounded-lg skill-card">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Developer Tools</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>VS Code & Eclipse</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Postman</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>MySQL</li>
+                        <li><i class="fas fa-check-circle mr-2 text-green-400"></i>Oracle Database</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden">
+                    <img src="https://private-user-images.githubusercontent.com/190948368/490605312-71d45333-96ad-42f5-b2b5-5a15a5debd68.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk0ODk0NzUsIm5iZiI6MTc1OTQ4OTE3NSwicGF0aCI6Ii8xOTA5NDgzNjgvNDkwNjA1MzEyLTcxZDQ1MzMzLTk2YWQtNDJmNS1iMmI1LTVhMTVhNWRlYmQ2OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwM1QxMDU5MzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNDM3N2MzMzY0ZmEzZDJjZGRkMmU1MGZlZGNlZjg3NTNkMjU0YjM2OTRhNDY4MjA5ZjZiOTMwMDNjNTU1N2NkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.h20wJVBHQLST1qkfmIzk773b-h74_anb-HwtCmbJNiw" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Spring Boot CRUD Web App with Security</h3>
+                        <p class="text-gray-400 mb-4">A simple yet robust Spring MVC project showcasing full C.R.U.D. (Create, Read, Update, Delete) operations with a complete user authentication and authorization system. This application is built from the ground up using a modern Java stack, demonstrating foundational concepts of web development and security.</p>
+                        <a href="https://github.com/Abhi-hash-beep/Spring-Boot-CRUD-Web-App-with-Security" class="text-blue-400 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden">
+                    <img src="https://private-user-images.githubusercontent.com/190948368/497095636-a0db16f4-c911-4e7b-b67c-9d644d7de7ac.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk0ODk2MzgsIm5iZiI6MTc1OTQ4OTMzOCwicGF0aCI6Ii8xOTA5NDgzNjgvNDk3MDk1NjM2LWEwZGIxNmY0LWM5MTEtNGU3Yi1iNjdjLTlkNjQ0ZDdkZTdhYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwM1QxMTAyMThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mYTBiNTgyYzk1ZjY5ZTE0N2IwZTQwZWZkNWNiZWRmOWE0YzA1ODYwZmE0ZGM1OGNiZDJlNDk4ZDgwMDM2Zjk2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Ew19vkQcKs0WbbxNuduUSIi-Sc2xYUoev1Xw_NveuDQ" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Student Database Spring MVC Application</h3>
+                        <p class="text-gray-400 mb-4">
+A full-stack student database management application using Spring Boot MVC for CRUD operations. This project is containerized with Docker and deployed on AWS EC2, featuring a decoupled architecture with the application and MySQL database running on separate instances. Technologies include Java, HTML/CSS/JS, and AWS.</p>
+                        <a href="https://github.com/Abhi-hash-beep/Student-Database-Spring-MVC-Application-" class="text-blue-400 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden">
+                    <img src="https://private-user-images.githubusercontent.com/190948368/488381680-95d64659-38e5-4468-8293-3519e289cf9f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk0ODkyOTMsIm5iZiI6MTc1OTQ4ODk5MywicGF0aCI6Ii8xOTA5NDgzNjgvNDg4MzgxNjgwLTk1ZDY0NjU5LTM4ZTUtNDQ2OC04MjkzLTM1MTllMjg5Y2Y5Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwM1QxMDU2MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNTNlMDBiMmZjM2Y1YzBkYTFiNGQwNzk3Y2FkNWJhYmMyOGY3MjgxYzAyMGNlMDlkM2MwYWI1MDZmMzIzMzY0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.FrzON3fH1-uoO14Qp0f4dwgVgKas61W0qP3GD6nn0dU" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tesla Web Clone</h3>
+                        <p class="text-gray-400 mb-4">This project is a static Tesla website clone built using HTML, CSS, and JavaScript. It replicates Tesla’s modern design with responsive layouts, interactive buttons, and hover effects. The site includes sections for products, energy solutions, and footer links. Ideal for showcasing front-end skills and practicing UI/UX development.
+                        </p>
+
+                        <a href="https://github.com/Abhi-hash-beep/tesla-web-clone" class="text-blue-400 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Education & Certifications</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- University -->
+                <div class="bg-gray-700/50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-white">Presidency University</h3>
+                    <p class="text-blue-400 text-lg mt-1">B-tech (Computer Science and technology(DevOps))</p>
+                    <p class="text-gray-400 mt-2 mb-4">Graduated: 2024</p>
+                    <p class="text-gray-300">
+                       My coursework provided a strong theoretical foundation in computer science, focusing on essential concepts like Data Structures, Algorithms, and Object-Oriented Programming, which prepared me for advanced, hands-on skill development
+                    </p>
+                </div>
+                <!-- JSpiders -->
+                <div class="bg-gray-700/50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-white">Java Full Stack</h3>
+                    <p class="text-blue-400 text-lg mt-1">Jspiders (Rajajinagar,Bangalore)</p>
+                
+                 
+                    <ul class="text-gray-300 mt-4 list-disc list-inside">
+                        
+                           <p class="text-gray-300">
+                       "This track provided in-depth experience in building and deploying dynamic, end-to-end web applications, focusing on scalable architecture and clean code principles."
+                    </p>
+                      
+                    </ul>
+                </div>
+                 <div class="bg-gray-700/50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-white">AWS with DevOps</h3>
+                    <p class="text-blue-400 text-lg mt-1">Jspiders (Rajajinagar,Bangalore)</p>
+                    <ul class="text-gray-300 mt-4 list-disc list-inside">
+                       
+                           <p class="text-gray-300">
+                       "This curriculum was centered on automating the software development lifecycle, from code commit to production deployment, using Infrastructure as Code (IaC) principles on the AWS cloud."
+                    </p>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contact Me</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-lg text-gray-400 mb-8">
+                    As a recent graduate, I'm actively seeking new opportunities. Feel free to reach out to me via email or connect with me on social media.
+                </p>
+                <a href="mailto:youremail@example.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    <i class="fas fa-envelope mr-2"></i>abhiabhishekr97@gmail.com
+                </a>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/abhishek-r-462660335/" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/Abhi-hash-beep" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/50 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            &copy; 2024 Abhishek R. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile nav toggle
+        const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+        const navbar = document.getElementById('navbar-sticky');
+
+        toggleButton.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Close mobile nav on link click
+                if (!navbar.classList.contains('hidden')) {
+                    navbar.classList.add('hidden');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
